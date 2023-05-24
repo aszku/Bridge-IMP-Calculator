@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Bridge IMP Calculator For Single Table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="brydż, bridge, IMP, calculator, kalkulator, tabela, table, card game">
+<meta name="description" content="Bridge IMP Calculator For Single Table - It allows to find IMP points without comparing two playing tables">
+<meta name="author" content="Anna Szaniawska">
+<script src="bridgeCalc.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<!-- HTML+CSS+JS Package version, 1.0 -->
+
+</head>
+
+<body>
+
+<div class="divMain">
+
+<br />
+
+<div class="divContainer" id="Calc_Chosen_Result">
+
+<div>
+<button onclick=calculateIMP(contractValue,contractColor,handsPoints,tricksTaken,xKontra,xPrzed) class="CalcButton divContainer"> Calculate!</button>
+<div class="outputDiv divContainer" id="calculatedResult" > (Here will be the choice & the result) </div>
+</div>
+
+
+<div>
+<button onclick="toggleDouble()" class="ToggleButtons divContainer" id="s_Kontra">Bez kontry</button> 
+<button onclick="toggleVulnerable()"  class="ToggleButtons" id="s_Partia">Przed partią</button>
+</div>
+
+</div>
+
+<br />
+
+<div class="divContainer">
+<div class="dropdown divContainer" id="Contract_Value">
+  <button onclick="myDropdownFunction(this)" class="dropbtn">Contract value</button>
+  <div id="xContractValue" class="dropdown-content">
+    <button onclick=setupContractValue(1)>1</button>
+    <button onclick=setupContractValue(2)>2</button>
+    <button onclick=setupContractValue(3)>3</button>
+    <button onclick=setupContractValue(4)>4</button>
+    <button onclick=setupContractValue(5)>5</button>
+    <button onclick=setupContractValue(6)>6</button>	
+	<button onclick=setupContractValue(7)>7</button>	
+  </div>
+</div>
+
+<div class="dropdown divContainer"  id="Contract_Color">
+  <button onclick="myDropdownFunction(this)" class="dropbtn">Contract color</button>
+  <div id="xContractColor" class="dropdown-content">
+    <button onclick=setupContractColor("&clubs;")> &clubs; </button>
+    <button onclick=setupContractColor("&diams;")> &diams; </button>
+    <button onclick=setupContractColor("&hearts;")> &hearts; </button>
+    <button onclick=setupContractColor("&spades;")> &spades; </button>
+    <button onclick=setupContractColor("NT")> NT </button>
+  </div>
+</div>
+</div>
+
+<br />
+
+<div class="divContainer">
+<div class="dropdown divContainer" id="Tricks">
+  <button onclick="myDropdownFunction(this)" class="dropbtn">Tricks taken (0-13)</button>
+  <div id="xTricksTaken" class="dropdown-content">
+	<button onclick=setupTricksTaken(0)>0</button>
+	<button onclick=setupTricksTaken(1)>1</button>
+    <button onclick=setupTricksTaken(2)>2</button>
+    <button onclick=setupTricksTaken(3)>3</button>
+    <button onclick=setupTricksTaken(4)>4</button>
+    <button onclick=setupTricksTaken(5)>5</button>
+    <button onclick=setupTricksTaken(6)>6</button>	
+	<button onclick=setupTricksTaken(7)>7</button>	
+    <button onclick=setupTricksTaken(8)>8</button>	
+    <button onclick=setupTricksTaken(9)>9</button>	
+    <button onclick=setupTricksTaken(10)>10</button>	
+    <button onclick=setupTricksTaken(11)>11</button>	
+    <button onclick=setupTricksTaken(12)>12</button>	
+    <button onclick=setupTricksTaken(13)>13</button>	
+  </div>
+</div>
+</div>
+
+<br />
+
+<div class="divContainer">
+<div class="dropdown divContainer" id="Points">
+  <button onclick="myDropdownFunction(this)" class="dropbtn divContainer">Points on your teams hands (0-40)</button>
+  <div id="xHandsPoints" class="dropdown-content">
+	<button onclick=setupHandsPoints(0)>0</button>
+	<button onclick=setupHandsPoints(1)>1</button>
+    <button onclick=setupHandsPoints(2)>2</button>
+    <button onclick=setupHandsPoints(3)>3</button>
+    <button onclick=setupHandsPoints(4)>4</button>
+    <button onclick=setupHandsPoints(5)>5</button>
+    <button onclick=setupHandsPoints(6)>6</button>	
+	<button onclick=setupHandsPoints(7)>7</button>	
+    <button onclick=setupHandsPoints(8)>8</button>	
+    <button onclick=setupHandsPoints(9)>9</button>	
+    <button onclick=setupHandsPoints(10)>10</button>	
+    <button onclick=setupHandsPoints(11)>11</button>	
+    <button onclick=setupHandsPoints(12)>12</button>	
+    <button onclick=setupHandsPoints(13)>13</button>	
+	<button onclick=setupHandsPoints(14)>14</button>	
+	<button onclick=setupHandsPoints(15)>15</button>	
+	<button onclick=setupHandsPoints(15)>16</button>	
+	<button onclick=setupHandsPoints(17)>17</button>	
+	<button onclick=setupHandsPoints(18)>18</button>	
+	<button onclick=setupHandsPoints(19)>19</button>	
+	<button onclick=setupHandsPoints(20)>20</button>	
+	<button onclick=setupHandsPoints(21)>21</button>	
+	<button onclick=setupHandsPoints(22)>22</button>	
+	<button onclick=setupHandsPoints(23)>23</button>	
+	<button onclick=setupHandsPoints(24)>24</button>	
+	<button onclick=setupHandsPoints(25)>25</button>	
+	<button onclick=setupHandsPoints(26)>26</button>	
+	<button onclick=setupHandsPoints(27)>27</button>	
+	<button onclick=setupHandsPoints(28)>28</button>	
+	<button onclick=setupHandsPoints(29)>29</button>	
+	<button onclick=setupHandsPoints(30)>30</button>	
+	<button onclick=setupHandsPoints(31)>31</button>	
+	<button onclick=setupHandsPoints(32)>32</button>	
+	<button onclick=setupHandsPoints(33)>33</button>	
+	<button onclick=setupHandsPoints(34)>34</button>	
+	<button onclick=setupHandsPoints(35)>35</button>	
+	<button onclick=setupHandsPoints(36)>36</button>	
+	<button onclick=setupHandsPoints(37)>37</button>	
+	<button onclick=setupHandsPoints(38)>38</button>	
+	<button onclick=setupHandsPoints(39)>39</button>	
+	<button onclick=setupHandsPoints(40)>40</button>	
+  </div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
+
