@@ -6,13 +6,14 @@ Current version: 1.0
 ---
 
 My to do list:
-- to make sure it works well on mobile...
++/- to make sure it works well on mobile... (dropdown for points forces scroll on some phones)
+- correct error "=> 4 IMP => 4 IMP [...]" (aability to click calculate on already calculated score)
 - to add clearer refresh option (possibly new button & function)
 - to clean language mess & add language toggle (PL/EN)
 - to make it prettier (CSS)
 - to improve usage description
 - to add link to the page "How it is calculated" (creating the calculation tutorial)
-- to correct comments for better readability
+- to correct comments for better code readability
 
 
 ## Author's comments regarding usage
